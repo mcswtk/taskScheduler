@@ -1,0 +1,25 @@
+Task Manager
+Short description
+Write a program that performs the basic functions of the task scheduler. Interaction with the user is carried out through the console.
+
+Detailed description
+The task scheduler consists of a task log, a user interface for adding and removing a task, as well as a system for alerting the user to an event, i.e. in the time planned for the scheduler, something must happen that tells the user that he has a certain task planned (see below).
+The task log should be stored on disk and loaded at program startup, and also saved when exiting. The file format can be arbitrary, if desired, you can use XML.
+As the user interface is the console. By certain commands, the user can delete scheduled tasks, add new ones with the necessary parameters (see the point below).
+
+Parameters of the planned task:
+- name
+- description
+- the time (date) of notification
+- contacts
+The implementation of the scheduler must be performed according to the following principles. A functional that implements the task log, the user interface and the notification system, as well as the task log itself, must be in different classes. Those. user interface in a separate class, work with the task log in a separate, the magazine itself in a separate and the notification system in a separate. These classes can communicate with each other through interfaces, but none of them should implement the logic of the other.
+Requirements
+(* Mandatory requirements are marked)
+1. The implementation of the Task Scheduler must correspond to the above mentioned principles. *
+2. Intuitive user interface. *
+3. Presence of functions for adding and deleting tasks, saving them to the general log of tasks to disk. * (+ Additional scores for the use of XML format)
+4. User notification system. * (+ Additional points for using Swing, + additional points for additional functionality with "complete" or "postpone" task)
+5. The code must satisfy the Code Conventions and is supplied with JavaDoc.
+Job Modifications
+1. Use of various notification systems (basic, audio signal + output to the console, launch of another program written in Java).
+2. The format for storing the task log on disk: a text file, serialized objects, XML, a compressed text file (zip).
