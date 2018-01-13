@@ -1,4 +1,4 @@
-package pracownicy;
+package taskScheduler;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -49,17 +49,22 @@ public class serviceCSV {
 	    }
 	    
 	    public static Task addTask() {
+	    	 System.out.println("\n");
 	    	System.out.println("Enter task data: ");
 	    	
+	    	System.out.println("task name >> ");
 	    	Scanner sc1 = new Scanner(System.in);
 			String task = sc1.nextLine();
 			
+			System.out.println("task decription >> ");
 			Scanner sc2 = new Scanner(System.in);
 			String description = sc2.nextLine();
 			
+			System.out.println("task start date >> ");
 			Scanner sc3 = new Scanner(System.in);
 			String data = sc3.nextLine();
 			
+			System.out.println("task contacts >> ");
 			Scanner sc4 = new Scanner(System.in);
 			String contacts = sc4.nextLine();
 			

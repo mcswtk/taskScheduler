@@ -1,4 +1,4 @@
-package pracownicy;
+package taskScheduler;
 
 import java.util.List;
 import java.util.Scanner;
@@ -32,43 +32,35 @@ public class Ui {
 			System.out.println("Choose menu item number: ");
 			System.out.println(">>");
 			int numer = sc.nextInt();
-			
+
 			String nameMenu = menu(numer);
-			
-			if (numer==1) {
-				 List<Task> tasks
-		   		 = serviceCSV.readTasks("tasks.csv");
-		   	 
-		   	 System.out.println("Reading... " + tasks.size() + " tasks");
-		   	 
-		   	 for (Task task : tasks) {
-		   		 System.out.println(" * taskId: "+ tasks.indexOf(task)+"-> "+ task );
-		   	 }
-		   	 
-		  	 tasks.add(serviceCSV.addTask());
-		 
-		   	 
-		   	
-		   	 
-		   	 
-		   	 
-		   	 System.out.println("\n");
-		   	 System.out.println("Task will be saved:");
-		   	 for (Task task : tasks) {
-		   		
-			   	 System.out.println(task);
+
+			if (numer == 1) {
+				List<Task> tasks = serviceCSV.readTasks("tasks.csv");
+
+				System.out.println("Reading... " + tasks.size() + " tasks");
+
+				for (Task task : tasks) {
+					System.out.println(" * taskId: " + tasks.indexOf(task) + "-> " + task);
+				}
+				System.out.println("\n");
+				tasks.add(serviceCSV.addTask());
+
+				System.out.println("\n");
+				System.out.println("Task will be saved:");
+				for (Task task : tasks) {
+
+					System.out.println(task);
+				}
+
+				System.out.println("Writing to file...");
+				serviceCSV.writeToFile(tasks, "test1.csv");
+				System.out.println("Done");
 			}
-		   	 
-		   	 
-		   	 
-		  System.out.println("Writing to file...");
-		   	 serviceCSV.writeToFile(tasks, "test1.csv");
-		   	 System.out.println("Done");  
-			}
-			
-			else if (numer==4) {
+
+			else if (numer == 4) {
 				System.out.println("You are close scheduler");
-				return ;
+				return;
 			}
 			System.out.println("To jest " + nameMenu);
 		} catch (Exception e) {
