@@ -71,9 +71,12 @@ public class serviceCSV {
 			Task tasks = new Task(task,description,data,contacts);
 			
 			return tasks;
-
 	    	}
 	    
+	    public static void removeTask() {
+	    	System.out.println("choose taskId for removing: ");
+	    	
+	    }
 	}
 
 

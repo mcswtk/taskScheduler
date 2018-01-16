@@ -1,5 +1,7 @@
 package taskScheduler;
-
+/*
+ * this is a test
+ */
 import java.time.LocalDate;
 
 public class Task {
@@ -113,13 +115,8 @@ public class Task {
 				+ contacts ;
 	}
 
-
-
-	void podwyzka(double zmiana) {
-		// przykladowo podwyszka o 10% - to zmiana (0.1)
-		//salary*=1.0+zmiana;
-		// salary = (int )(salary*(1.0+zmiana));
-	}
+	
+	
 }
 
 
